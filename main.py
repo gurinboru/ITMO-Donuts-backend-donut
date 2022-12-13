@@ -11,5 +11,3 @@ api.add_resource(Product, api_base_url + "product/<int:product_id>")
 api.add_resource(Products, api_base_url + "products/")
 api.add_resource(Model, api_base_url + "model/<int:product_id>")
 api.add_resource(Price, api_base_url + "price/<int:product_id>")
-
-

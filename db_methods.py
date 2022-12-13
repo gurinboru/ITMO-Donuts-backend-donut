@@ -1,5 +1,4 @@
 from db_models import Models, Products, Prices
-from flask_sqlalchemy import SQLAlchemy
 from db_session import DataBase
 from errors import IdNotFound
 

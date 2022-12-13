@@ -13,7 +13,7 @@ db_port = os.getenv("DB_PORT")
 
 
 if db_ip and db_port and db_login and db_password:
-    dbm = DBMethods(f"mysql://{db_login}:{db_password}@{db_ip}:{db_port}/donuts_donut")
+    dbm = DBMethods(f"mysql://{db_login}:{db_password}@{db_ip}:{db_port}/donuts_donut?charset=utf8")
     print("DBMethods initialized")
 else:
     print(db_ip, db_port, db_login, db_password)
