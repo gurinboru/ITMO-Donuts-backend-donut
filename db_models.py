@@ -8,8 +8,8 @@ class Models(SqlAlchemyBase):
 
     model_id = sa.Column(sa.Integer, primary_key=True, nullable=False)
     product_id = sa.Column(sa.Integer, sa.ForeignKey('products.product_id'))
-    obj_path = sa.Column(sa.String(100), nullable=False)
-    mtl_path = sa.Column(sa.String(100), nullable=False)
+    obj_path = sa.Column(sa.String(150), nullable=False)
+    mtl_path = sa.Column(sa.String(150), nullable=False)
 
     def __repr__(self):
         return f'<Model> {self.model_id} {self.product_id} {self.obj_path} {self.mtl_path}'
@@ -23,7 +23,7 @@ class Products(SqlAlchemyBase):
     short_description = sa.Column(sa.String(100))
     energetic_value = sa.Column(sa.String(100))
     weight = sa.Column(sa.Integer)
-    picture = sa.Column(sa.String(100))
+    picture = sa.Column(sa.String(150))
     price = orm.relationship('Prices', backref='Products')
 
     def __repr__(self):
